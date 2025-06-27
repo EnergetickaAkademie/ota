@@ -1,8 +1,8 @@
 {
   "name": "EA-OTA",
   "version": "1.0.0",
-  "description": "OTA updates and WebSerial debugging library for ESP8266 by Energetická Akademie",
-  "keywords": ["ota", "webserial", "debug", "wifi", "esp8266", "arduino", "platformio"],
+  "description": "OTA updates and WebSerial debugging library for ESP8266 and ESP32 by Energetická Akademie",
+  "keywords": ["ota", "webserial", "debug", "wifi", "esp8266", "esp32", "arduino", "platformio"],
   "repository": {
     "type": "git",
     "url": "https://github.com/EnergetickaAkademie/ota.git"
@@ -16,7 +16,7 @@
   "license": "MIT",
   "homepage": "https://github.com/EnergetickaAkademie/ota",
   "frameworks": ["arduino"],
-  "platforms": ["espressif8266"],
+  "platforms": ["espressif8266", "espressif32"],
   "dependencies": [
     {
       "name": "ayushsharma82/WebSerial",

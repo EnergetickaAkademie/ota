@@ -1,6 +1,6 @@
 # EA-OTA Library
 
-A comprehensive OTA (Over-The-Air) updates and WebSerial debugging library for ESP8266 Arduino projects by Energetická Akademie.
+A comprehensive OTA (Over-The-Air) updates and WebSerial debugging library for ESP8266 and ESP32 Arduino projects by Energetická Akademie.
 
 ## Features
 
@@ -16,7 +16,7 @@ A comprehensive OTA (Over-The-Air) updates and WebSerial debugging library for E
 This library automatically handles the following dependencies:
 - `ayushsharma82/WebSerial` - Web-based serial monitor
 - `ottowinter/ESPAsyncWebServer-esphome` - Async web server
-- Built-in ESP8266 libraries: WiFi, mDNS, ArduinoOTA
+- Built-in ESP8266/ESP32 libraries: WiFi, mDNS, ArduinoOTA
 
 ## Installation
 

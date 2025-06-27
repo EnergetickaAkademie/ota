@@ -51,11 +51,11 @@ void setupOTA(int port, const char* hostname, const char* password) {
 	});
 	
 	ArduinoOTA.onProgress([](unsigned int progress, unsigned int total) {
-		Serial.printf("Progress: %u%%\r", (progress / (total / 100)));
+Serial.printf("Progress: %u%%\r", (progress / (total / 100)));
 	});
 
 	ArduinoOTA.onError([](ota_error_t error) {
-		Serial.printf("Error[%u]: ", error);
+Serial.printf("Error[%u]: ", error);
 		if (error == OTA_AUTH_ERROR) Serial.println("Auth Failed");
 		else if (error == OTA_BEGIN_ERROR) Serial.println("Begin Failed");
 		else if (error == OTA_CONNECT_ERROR) Serial.println("Connect Failed");
@@ -77,7 +77,7 @@ void setupWebSerial(const char* hostname) {
 	
 	// Optional: Set a callback for received messages
 	WebSerial.msgCallback([](uint8_t *data, size_t len){
-		String d = "";
+String d = "";
 		for(size_t i=0; i < len; i++){
 			d += char(data[i]);
 		}
@@ -98,5 +98,7 @@ void setupWebSerial(const char* hostname) {
 
 void handleOTA(){
 	ArduinoOTA.handle();
+#ifdef ESP8266
 	MDNS.update();
+#endif
 }

@@ -76,15 +76,12 @@ void setupWebSerial(const char* hostname) {
 	WebSerial.begin(&server);
 	
 	// Optional: Set a callback for received messages
-	WebSerial.msgCallback([](uint8_t *data, size_t len){
-String d = "";
-		for(size_t i=0; i < len; i++){
-			d += char(data[i]);
-		}
+	WebSerial.onMessage([](uint8_t *data, size_t len) {   // raw‑buffer version
+		String d((char*)data, len);                       // fast copy
 		WebSerial.println("Received Data: " + d);
 		Serial.println("Received from WebSerial: " + d);
 	});
-	
+		
 	server.begin();
 	
 	Serial.println("WebSerial initialized!");

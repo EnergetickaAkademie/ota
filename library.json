@@ -19,12 +19,10 @@
   "platforms": ["espressif8266", "espressif32"],
   "dependencies": [
     {
-      "name": "ayushsharma82/WebSerial",
-      "version": "^1.4.0"
+      "name": "ayushsharma82/WebSerial"
     },
     {
-      "name": "ottowinter/ESPAsyncWebServer-esphome",
-      "version": "^3.0.0"
+      "name": "ottowinter/ESPAsyncWebServer-esphome"
     }
   ],
   "build": {
